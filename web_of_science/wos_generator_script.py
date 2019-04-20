@@ -6,7 +6,7 @@ import shutil
 import datetime
 import psycopg2
 
-path='/pathToDirectory/withTheGenericParserMasterFolderAndXMLFilesFolderInIt'
+path='/pathToDirectory/withTheGenericParserMasterFolderAndXMLFilesFolder'
 
 def splitFiles(x):
     if not x.endswith('.xml'):
