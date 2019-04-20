@@ -55,7 +55,7 @@ def splitFiles(x):
 
 def iterateInsert(fileName):
     if fileName.endswith('.txt'):
-        conn = psycopg2.connect("dbname=webofsciencecomplete user=acmeuser port=5433")
+        conn = psycopg2.connect("dbname=dbName user=username host=hostIP port=XXXX")
         print ("Start time for %s: %s") % (fileName, datetime.datetime.now())
         with open(path + '/generic_parser-master/output/' + fileName, 'r') as f:
             sqlRead = f.read()
@@ -131,7 +131,7 @@ def errorSplit(fileName):
 def finalErrorFix(fileName):
     if fileName.endswith('.txt') or fileName.endswith('.sql'):
         with open(path + '/generic_parser-master/output/' + fileName, 'r') as f:
-            conn = psycopg2.connect("dbname=webofsciencecomplete user=acmeuser port=5433")
+            conn = psycopg2.connect("dbname=dbName user=username host=hostIP port=XXXX")
             print(fileName)
             lastLine = ''
             for line in f:
