@@ -29,6 +29,10 @@ As was evidenced in the initial build the XML files do contain duplicate data. B
 
 What follow are additional things you can add to make the database more robust and to allow for faster queries in some cases. They are not required for the database to function, but if the time is available they are quite useful additions. The database can be queried while these option are being added, but updates, inserts, and deletions on the tables being indexed or having foreign key relationships established will cause major errors.
 
+###Cleaning out the bonus Data
+During the creation of the database there will be data added to some of the tables which is not related to a full record. This data will make it impossible to establish foreign keys as there will be no entry in the referenced table for the data. In order to clean this data out of the database (most of it is refering to publications newer than the XML records, e.g. 2018 publications when the XML records only cover publications up to 2017) run the sql statements in the file "wos_data_cleaning.sql". Once these are done the foreign keys can be established.
+
+
 ###Establish Indexes and Foreign Keys
 In order to speed up queries I created a series of indexes which can be created, "wos_indexes.sql", and you can also establish the foreign key relationships defined by IU CNS, "wos_constraints_foreign_keys.sql". Both can be run by pasting the code from the files into a SQL development environment and then executing the statements. The indexes and foreign key relationships take a long time to finish, but they can be run in the background while the database is being used. 
 
