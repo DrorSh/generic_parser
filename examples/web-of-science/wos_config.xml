@@ -34,7 +34,7 @@
 				<conferences count="wos_summary:conference_count">
 					<conference table="wos_conference" ctr_id="wos_conference:conf_record_id" conf_id="wos_conference:conf_id">
 						<conf_infos count="wos_conference:conf_info_count">
-							<conf_info table="wos_conf_info" ctr_id="wos_conf_info:info_id" lang_id="wos_conf_info:lang_ind">wos_conf_info:conf_info</conf_info>
+							<conf_info table="wos_conf_info" ctr_id="wos_conf_info:info_id" lang_id="wos_conf_info:lang_id">wos_conf_info:conf_info</conf_info>
 						</conf_infos>
 						<conf_titles count="wos_conference:conf_title_count">
 							<conf_title table="wos_conf_title" ctr_id="wos_conf_title:title_id" lang_id="wos_conf_title:lang_id">wos_conf_title:conf_title</conf_title>
@@ -67,13 +67,13 @@
 								<suborganization table="wos_publisher_suborganizations" ctr_id="wos_publisher_suborganizations:suborg_id" lang_id="wos_publisher_suborganizations:lang_id">wos_publisher_suborganizations:suborganization</suborganization>
 							</suborganizations>
 							<email_addr table="wos_publisher_email_addr" ctr_id="wos_publisher_email_addr:email_id" lang_id="wos_publisher_email_addr:lang_id">wos_publisher_email_addr:email_addr</email_addr>
-							<url_spec type="wos_publisher:url_type" date_info="wos_publisher:url_date_info" create_date="wos_publisher:url_create_date" revised_date="wos_publisher:url_revised_date" cited_date="wos_publisher:cited_date">
+							<url_spec type="wos_publisher:url_type" date_info="wos_publisher:url_date_info" create_date="wos_publisher:url_create_date" revised_date="wos_publisher:url_revised_date" cited_date="wos_publisher:url_cited_date">
 								<url>wos_publisher:url</url>
 								<dois>
 									<doi table="wos_publisher_dois" ctr_id="wos_publisher_dois:doi_id">wos_publisher_dois:doi</doi>
 								</dois>
 							</url_spec>
-							<laboratory lang_id="wos_publisher:laboratory:lang_id">wos_publisher:laboratory</laboratory>
+							<laboratory lang_id="wos_publisher:laboratory_lang_id">wos_publisher:laboratory</laboratory>
 							<street lang_id="wos_publisher:street_lang_id">wos_publisher:street</street>
 							<city lang_id="wos_publisher:city_lang_id">wos_publisher:city</city>
 							<province lang_id="wos_publisher:province_lang_id">wos_publisher:province</province>
@@ -110,7 +110,7 @@
 					<doctype table="wos_normalized_doctypes" ctr_id="wos_normalized_doctypes:doctype_id" code="wos_normalized_doctypes:code">wos_normalized_doctypes:doctype</doctype>
 				</normalized_doctypes>
 				<descriptive_ref_count>wos_summary:descriptive_ref_count</descriptive_ref_count>
-				<refs count="wos_summary:reference_count"></refs>
+				<refs count="wos_summary:refs_count"></refs>
 				<references count="wos_summary:reference_count">
 					<reference table="wos_references" ctr_id="wos_references:ref_ctr">
 						<uid>wos_references:ref_id</uid>
@@ -137,13 +137,13 @@
 								<suborganization table="wos_address_suborganizations" ctr_id="wos_address_suborganizations:suborg_id" lang_id="wos_address_suborganizations:lang_id">wos_address_suborganizations:suborganization</suborganization>
 							</suborganizations>
 							<email_addr table="wos_address_email_addr" ctr_id="wos_address_email_addr:email_id" lang_id="wos_address_email_addr:lang_id">wos_address_email_addr:email_addr</email_addr>
-							<url_spec type="wos_addresses:url_type" date_info="wos_addresses:url_date_info" create_date="wos_addresses:url_create_date" revised_date="wos_addresses:url_revised_date" cited_date="wos_addresses:cited_date">
+							<url_spec type="wos_addresses:url_type" date_info="wos_addresses:url_date_info" create_date="wos_addresses:url_create_date" revised_date="wos_addresses:url_revised_date" cited_date="wos_addresses:url_cited_date">
 								<url>wos_addresses:url</url>
 								<dois>
 									<doi table="wos_address_dois" ctr_id="wos_address_dois:doi_id">wos_address_dois:doi</doi>
 								</dois>
 							</url_spec>
-							<laboratory lang_id="wos_addresses:laboratory:lang_id">wos_addresses:laboratory</laboratory>
+							<laboratory lang_id="wos_addresses:laboratory_lang_id">wos_addresses:laboratory</laboratory>
 							<street lang_id="wos_addresses:street_lang_id">wos_addresses:street</street>
 							<city lang_id="wos_addresses:city_lang_id">wos_addresses:city</city>
 							<province lang_id="wos_addresses:province_lang_id">wos_addresses:province</province>
@@ -183,7 +183,7 @@
 					<fund_text>wos_summary:fund_ack</fund_text>
 					<grants count="wos_summary:grants_count" complete="wos_summary:grants_complete">
 						<grant table="wos_grants" ctr_id="wos_grants:grant_id">
-							<grant_info lang_id="wos_grants:grant_info_language">wos_grants:grant_info</grant_info>
+							<grant_info lang_id="wos_grants:grant_info_lang_id">wos_grants:grant_info</grant_info>
 							<grant_agency lang_id="wos_grants:grant_agency_lang_id" preferred="wos_grants:grant_agency_preferred">wos_grants:grant_agency</grant_agency>
 							<alt_agencies count="wos_grants:alt_agency_count">
 								<alt_agency table="wos_grant_alt_agencies" ctr_id="wos_grant_alt_agencies:alt_agency_id" lang_id="wos_grant_alt_agencies:lang_id" preferred="wos_grant_alt_agencies:preferred">wos_grant_alt_agencies:alt_agency</alt_agency>
@@ -198,10 +198,10 @@
 					</grants>
 				</fund_ack>
 				<keywords count="wos_summary:keyword_count">
-					<keyword table="wos_keywords" ctr_id="wos_keywords:keyword_id" lang_id="wos_keywords:keyword_language">wos_keywords:keyword</keyword>
+					<keyword table="wos_keywords" ctr_id="wos_keywords:keyword_id" lang_id="wos_keywords:keyword_lang_id">wos_keywords:keyword</keyword>
 				</keywords>
 				<abstracts count="wos_summary:abstract_count">
-					<abstract table="wos_abstracts" ctr_id="wos_abstracts:abstract_id" lang_id="wos_abstracts:abstract_language" type="wos_abstracts_abstract_type" provider="wos_abstract:provider">
+					<abstract table="wos_abstracts" ctr_id="wos_abstracts:abstract_id" lang_id="wos_abstracts:abstract_lang_id" type="wos_abstracts:abstract_type" provider="wos_abstract:provider">
 						<abstract_text count="wos_abstracts:paragraph_count">
 							<p table="wos_abstract_paragraphs" ctr_id="wos_abstract_paragraphs:paragraph_id" label="wos_abstract_paragraphs:paragraph_label">wos_abstract_paragraphs:paragraph_text</p>
 						</abstract_text>
@@ -232,13 +232,13 @@
 							<suborganization table="wos_reprint_address_suborganizations" ctr_id="wos_reprint_address_suborganizations:suborg_id" lang_id="wos_reprint_address_suborganizations:lang_id">wos_reprint_address_suborganizations:suborganization</suborganization>
 						</suborganizations>
 						<email_addr table="wos_reprint_address_email_addr" ctr_id="wos_reprint_address_email_addr:email_id" lang_id="wos_reprint_address_email_addr:lang_id">wos_reprint_address_email_addr:email_addr</email_addr>
-						<url_spec type="wos_reprint_addresses:url_type" date_info="wos_reprint_addresses:url_date_info" create_date="wos_reprint_addresses:url_create_date" revised_date="wos_reprint_addresses:url_revised_date" cited_date="wos_reprint_addresses:cited_date">
+						<url_spec type="wos_reprint_addresses:url_type" date_info="wos_reprint_addresses:url_date_info" create_date="wos_reprint_addresses:url_create_date" revised_date="wos_reprint_addresses:url_revised_date" cited_date="wos_reprint_addresses:url_cited_date">
 							<url>wos_reprint_addresses:url</url>
 							<dois>
 								<doi table="wos_reprint_address_dois" ctr_id="wos_reprint_address_dois:doi_id">wos_reprint_address_dois:doi</doi>
 							</dois>
 						</url_spec>
-						<laboratory lang_id="wos_reprint_addresses:laboratory:lang_id">wos_reprint_addresses:laboratory</laboratory>
+						<laboratory lang_id="wos_reprint_addresses:laboratory_lang_id">wos_reprint_addresses:laboratory</laboratory>
 						<street lang_id="wos_reprint_addresses:street_lang_id">wos_reprint_addresses:street</street>
 						<city lang_id="wos_reprint_addresses:city_lang_id">wos_reprint_addresses:city</city>
 						<province lang_id="wos_reprint_addresses:province_lang_id">wos_reprint_addresses:province</province>
@@ -263,7 +263,7 @@
 					</names>
 				</reprint_contact>
 				<keywords_plus count="wos_summary:keywords_plus_count">
-					<keyword table="wos_keywords_plus" ctr_id="wos_keywords_plus:keyword_id" lang_id="wos_keywords_plus:keyword_language">wos_keywords_plus:keyword_plus</keyword>
+					<keyword table="wos_keywords_plus" ctr_id="wos_keywords_plus:keyword_id" lang_id="wos_keywords_plus:keyword_lang_id">wos_keywords_plus:keyword_plus</keyword>
 				</keywords_plus>
 				<book_chapters>wos_summary:book_chapters</book_chapters>
 				<book_pages>wos_summary:book_pages</book_pages>
